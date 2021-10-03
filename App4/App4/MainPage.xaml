@@ -25,7 +25,8 @@
         <ListView ItemsSource="{Binding MyList}">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <TextCell Text="{Binding .}" TextColor="Orange"/>
+                    <TextCell Text="{Binding Name}" TextColor="Orange"
+                              Detail="{Binding Details}" DetailColor="Orange"/>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>

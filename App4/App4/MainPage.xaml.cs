@@ -10,12 +10,23 @@ namespace App4
 {
     public partial class MainPage : ContentPage
     {
-        public List<string> MyList { get; set; }
+        public List<Customer> MyList { get; set; }
         public MainPage()
         {
             InitializeComponent();
-            MyList = new List<string> { "Code 1", "Code 2" };
+            MyList = new List<Customer>
+            {
+                new Customer { Name = "James", Details = "James Details"},
+                new Customer { Name = "Harshith", Details = "Harshith Details"}
+
+            };
             BindingContext = this;
         }
+    }
+
+    public class Customer
+    {
+        public string Name { get; set; }
+        public string Details { get; set; }
     }
 }
